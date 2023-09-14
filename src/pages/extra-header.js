@@ -15,7 +15,7 @@ const IndexPage = () => {
   return (
     <main style={pageStyles}>
       <h1 style={headingStyles}>
-        This page should have an additional header to prevent iframing
+        This page should have an additional header called Test-Header set to "SET"
       </h1>
     </main>
   )
