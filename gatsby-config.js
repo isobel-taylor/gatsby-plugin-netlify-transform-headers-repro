@@ -16,10 +16,12 @@ module.exports = {
               mergeSecurityHeaders: false, // boolean to turn off the default security headers
               mergeCachingHeaders: true, // boolean to turn off the default
               transformHeaders: (headers, path) => {
-                if (path.startsWith("/extra-header")) {
+                console.log(String(path))
+
+                if (path?.includes("extra-header")) {
                   headers.push(
                     "X-Frame-Options: DENY"
-                  );
+                  )
                 }
 
                 return headers
