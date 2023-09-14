@@ -19,11 +19,11 @@ module.exports = {
                 console.log(String(path))
                 console.log(headers)
 
-                // if (path?.includes("extra-header")) {
-                //   headers.push(
-                //     "X-Frame-Options: DENY"
-                //   )
-                // }
+                if (path?.includes("extra-header")) {
+                  headers.push(
+                    "Test-Header: SET"
+                  )
+                }
 
                 return headers
               }, // optional transform for manipulating headers under each path (e.g.sorting), etc.
