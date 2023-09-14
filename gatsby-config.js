@@ -17,12 +17,13 @@ module.exports = {
               mergeCachingHeaders: true, // boolean to turn off the default
               transformHeaders: (headers, path) => {
                 console.log(String(path))
+                console.log(headers)
 
-                if (path?.includes("extra-header")) {
-                  headers.push(
-                    "X-Frame-Options: DENY"
-                  )
-                }
+                // if (path?.includes("extra-header")) {
+                //   headers.push(
+                //     "X-Frame-Options: DENY"
+                //   )
+                // }
 
                 return headers
               }, // optional transform for manipulating headers under each path (e.g.sorting), etc.
